@@ -30,10 +30,10 @@ RUN reflector --sort rate --threads 2 -c "United States" -f 30 -a 24 \
 RUN pacman -Syy --noconfirm
 
 # Install needed software
-RUN pacman -S --needed --noconfirm base-devel
-RUN pacman -S --needed --noconfirm base
-RUN pacman -S --needed --noconfirm python
-RUN pacman -S --needed --noconfirm abs
+RUN pacman -Syu --noconfirm base-devel
+RUN pacman -Syu --noconfirm base
+RUN pacman -Syu --noconfirm python
+RUN pacman -Syu --noconfirm abs
 
 # Sync Arch Build System repository
 RUN abs
