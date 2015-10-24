@@ -12,7 +12,6 @@
 # implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 FROM base/arch:latest
 MAINTAINER Kareem Khazem <khazem@google.com>
