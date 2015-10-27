@@ -24,7 +24,7 @@ RUN pacman-db-upgrade
 # Get the fastest and newest mirrors
 RUN pacman -S --noconfirm reflector
 RUN reflector --sort rate --threads 2 -c "United States" -f 30 -a 24 \
-    > /etc/pacman.d/mirrorlist
+    | shuf | > /etc/pacman.d/mirrorlist
 
 # Re-sync to whatever mirror we are now using
 RUN pacman -Syy --noconfirm
